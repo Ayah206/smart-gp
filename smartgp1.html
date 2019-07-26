@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GPA calculator</title>
+    <script src="smartgp.js"></script>
+    <style>
+        body {
+            height: 100%;
+            width:100%;
+        }
+
+        .head {
+            width: 93%;
+            margin: auto;
+            padding: 15px;
+            background: transparent;
+            color: white;
+            border-radius: 12px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: consolas;
+            font-weight: bold;
+            font-size: 24px;
+            border: groove 2px white;
+
+        }
+
+        .overall {
+            width: 100%;
+            margin: auto;
+            padding: 30px 0px;
+            color: white;
+            background-image: url('cool.jpg.jpg');
+            position: center;
+
+
+        }
+
+        .content {
+            background-image: url(cute.jpg);
+            position: center;
+            width: 95%;
+            height: 400px;
+            display: flex;
+            margin: auto;
+            border: groove 3px;
+
+
+        }
+
+        .coursenumber {
+
+            width: 40%;
+            /* background: #355664; */
+            margin: 0px;
+            float: left;
+
+        }
+
+        .mp {
+            width: 60%;
+            background: whitesmoke;
+            float: right;
+            height: inherit;
+            overflow-y: scroll;
+            padding-left: 30px;
+            padding-right: 30px;
+            /* display:flex;
+            flex-direction:column;
+            align-items: center; */
+
+
+
+        }
+
+        .mainpage {
+            display: flex;
+            justify-content: space-between;
+            color: #355664;
+            height: inherit;
+
+        }
+
+        .here {
+            text-align: center;
+        }
+
+        .here2 {
+            text-align: center;
+        }
+
+        .here3 {
+            text-align: center;
+        }
+
+
+
+
+
+        .can{
+            display:flex;
+        }
+        .cn {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25%;
+            text-align:center;
+            color:#021c3f
+
+
+        }
+        label{
+            font-weight:bold;
+        }
+
+        input#num {
+            padding: 7px;
+            width: 50%;
+            background: whitesmoke;
+            border-radius: 6px;
+            color: #122831;
+            /* float: right; */
+
+        }
+
+        button {
+            padding: 7px;
+
+            background: #122831;
+            border-radius: 6px;
+            color: red;
+            /* float: right;
+            margin: 10px auto; */
+        }
+
+        #green {
+            background: rgb(42, 133, 42);
+            color: white;
+            font-weight: bold;
+            font-size: 26px;
+            float: right;
+        }
+
+        ul {
+            list-style-type: none;
+
+        }
+
+        ol input {
+            width: 70%;
+        }
+
+        input {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+            padding: 10px;
+            background: #7fb7cf;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        ol li {
+            color: #355664;
+        }
+
+        h3, h4 {
+            color: #122831;
+            text-align: center;
+
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            margin: auto;
+            background: #021c3f;
+            color: #93d5f1;
+            text-transform:uppercase;
+            text-align:center;
+            padding:20px;
+            font-size:24px;
+            font-weight:bold;
+            /* border: groove 3px; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overall">
+        <div class="head">
+            Online Grade Point (GP) Calculator
+        </div><br>
+        <div class="content">
+
+            <div class="coursenumber">
+                <!-- <div class="can"> -->
+                    <!-- <div><h4>Number of courses:</h4></div> -->
+                    <div class="cn">   
+                    <div><label>No. of courses offered:</label><input type="number" value="" id="num"></div>
+                    <div><button onclick="collect()" id="sub">submit</button></div>
+                    <!-- </div>  -->
+
+                </div>
+
+            </div>
+            <div class="mp">
+                <h3>fill in your course grade and grade point in the respective boxes that appear below</h3>
+                <div class="mainpage">
+
+                    <div class="here">
+                        <h4>COURSE</h4>
+                        <ol id="ordered">
+                        </ol>
+                    </div>
+                    <div class="here2">
+                        <h3>GRADE</h3>
+                        <ul id="unordered">
+                    
+                        </ul>
+                    </div>
+                    <div class="here3">
+                        <h4>CREDIT UNIT</h4>
+                        <ul id="unordered2">
+
+                        </ul>
+                        <div id="gre"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="footer" class="alert alert-success" role="alert">
+            <!-- <p><h4 class="alert-heading">congrats!</h4>
+            You successfully read this important alert message.</p> -->
+          </div>
+    </div>
+</body>
+
+</html>
