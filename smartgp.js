@@ -1,4 +1,9 @@
 
+
+function test(){
+    console.log("Unit Testing");
+}
+
 function collect(){
     var num= parseInt(document.getElementById("num").value)
     document.getElementById("unordered").innerHTML= ""
